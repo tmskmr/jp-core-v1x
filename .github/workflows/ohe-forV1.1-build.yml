@@ -3,12 +3,12 @@ name: JPCore FHIR Task
 on:
   push:
     branches: 
-      - ohe-forv1.1
+      - ohe-forV1.1
     paths:
       - 'sushi-config.yaml'
       - 'input/**'
   pull_request:
-    branches: [ ohe-forv1.1 ]
+    branches: [ ohe-forV1.1 ]
     
 jobs:
   turn:
@@ -51,5 +51,5 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_branch: ohe-forv1.1-pages
+        publish_branch: ohe-forV1.1-pages
         publish_dir: ./output
