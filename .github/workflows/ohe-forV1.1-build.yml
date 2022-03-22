@@ -1,4 +1,4 @@
-name: JPCore FHIR Task
+name: JPCore testing development by Kohe
 
 on:
   push:
@@ -50,6 +50,7 @@ jobs:
       if: success()
       uses: peaceiris/actions-gh-pages@v3
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+        external_repository: kazuhiko-ohe/jp-core-develop
         publish_branch: ohe-forV1.1-pages
         publish_dir: ./output
